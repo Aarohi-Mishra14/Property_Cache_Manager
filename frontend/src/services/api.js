@@ -35,10 +35,10 @@ async function request(path, options = {}) {
         clearTimeout(timeoutId);
 
         if (err.name === 'AbortError') {
-            throw new Error('The request timed out. Check your connection and try again.');
+            throw new Error('The request timed out. Check your connection and try again.', { cause: err });
         }
         if (err instanceof TypeError) {
-            throw new Error('Unable to reach the server. Check your connection and try again.');
+            throw new Error('Unable to reach the server. Check your connection and try again.', { cause: err });
         }
         throw err;
     }
