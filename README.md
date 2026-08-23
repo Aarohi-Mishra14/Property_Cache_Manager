@@ -2,6 +2,8 @@
 
 A small internal tool built for Property Listings' floor staff, replacing the paper and Excel process they were using to track property records. There's a real cache-aside layer sitting in front of MySQL — you can actually watch Redis cache hits, misses, and invalidations happen live from the UI.
 
+🔗 Live demo: https://property-cache-manager.vercel.app
+
 ## What it does
 
 - Add, edit, delete and search property listings
